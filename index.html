@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Something Big Coming Soon</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script
+      type="module"
+      src="https://unpkg.com/@splinetool/viewer@1.9.15/build/spline-viewer.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="logo-img">
+        <img src="/image's/logo.jpg" alt="GAIA Logo" />
+      </div>
+      <div class="text-group">
+        <h1>Coming Soon</h1>
+        <h2>To and For the Beyonds</h2>
+        <p>Get ready, something good is coming!</p>
+        <button id="contactButton">Contact Us</button>
+      </div>
+      <!-- Embed Spline Object -->
+      <div class="spline-container">
+        <spline-viewer
+          url="https://prod.spline.design/dURGWq81cuI9ENUf/scene.splinecode"
+        ></spline-viewer>
+      </div>
+    </div>
+
+    <!-- Contact Form Pop-up -->
+    <div id="contactForm" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Contact Us</h2>
+        <form>
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required />
+
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" required></textarea>
+
+          <button type="submit">Send</button>
+          <!-- <button onclick="sendMessage()">Send</button> -->
+        </form>
+      </div>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,229 @@
+body,
+h1,
+h2,
+p,
+button {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+/* Body and Container Styling */
+body {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000; /* Black background */
+  overflow: hidden;
+}
+
+/* Background Image Styling */
+.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: #000; /* Black background to fill in */
+  overflow: hidden;
+}
+
+.logo-img {
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  color: #fff;
+  text-align: left;
+}
+
+.spline-container {
+  position: relative;
+  margin: 0%;
+  padding: 0%;
+  top: 0%;
+  bottom: 0%;
+  right: 0%;
+  left: 15%;
+  color: #fff;
+  text-align: left;
+  width: auto;
+  height: auto;
+}
+
+/* Text Group Styling */
+.text-group {
+  position: absolute;
+  bottom: 10%;
+  left: 10%;
+  color: #fff;
+  text-align: left;
+  width: 40%; /* Adjusted to prevent text overflow on smaller screens */
+}
+
+/* Heading Styles */
+h1 {
+  font-size: 64px;
+  font-weight: bold;
+  color: #d4c5f9; /* Light purple color */
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 32px;
+  color: #fff; /* White color */
+  margin-bottom: 10px;
+}
+
+/* Paragraph Styling */
+p {
+  font-size: 16px;
+  color: #d4c5f9; /* Same light purple color as h1 */
+  margin-bottom: 20px;
+}
+
+/* Button Styling */
+button {
+  padding: 10px 20px;
+  background-color: #d4c5f9; /* Light purple color */
+  border: none;
+  border-radius: 5px;
+  color: #000;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #a99fe7; /* Slightly darker purple on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .container::before {
+    width: 300%; /* Expand the Earth image for smaller screens */
+    height: 300%;
+  }
+
+  .text-group {
+    width: 80%; /* Make text-group wider on smaller screens */
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%); /* Center text-group on smaller screens */
+  }
+
+  .s h1 {
+    font-size: 48px; /* Smaller font size for mobile */
+  }
+
+  h2 {
+    font-size: 24px; /* Smaller font size for mobile */
+  }
+
+  p {
+    font-size: 14px; /* Smaller font size for mobile */
+  }
+
+  button {
+    font-size: 14px; /* Smaller button text for mobile */
+    padding: 8px 16px; /* Adjusted padding for smaller screens */
+  }
+}
+
+/* Modal (Pop-up) Styles */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.6); /* Black w/ opacity */
+}
+
+.modal-content {
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.1
+  ); /* Slightly transparent background */
+  backdrop-filter: blur(10px); /* Blurring background */
+  margin: 10% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 400px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 2px rgba(255, 255, 255, 0.1);
+  color: #fff;
+  text-align: center;
+}
+
+.modal-content h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.modal-content label {
+  display: block;
+  text-align: left;
+  margin-bottom: 8px;
+}
+
+.modal-content input[type="text"],
+.modal-content input[type="email"],
+.modal-content textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+
+.modal-content button {
+  background-color: #d4c5f9;
+  color: #000;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.modal-content button:hover {
+  background-color: #a99fe7;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .modal-content {
+    width: 90%;
+    margin: 20% auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .modal-content {
+    width: 95%;
+    margin: 25% auto;
+  }
+}
